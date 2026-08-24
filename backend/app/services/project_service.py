@@ -4,6 +4,11 @@ from ..models.project import Project
 _projects: dict[str, Project] = {}
 
 
+def list_projects() -> list[Project]:
+	"""Return all stored projects."""
+	return list(_projects.values())
+
+
 def create_project(name: str, description: str = "") -> Project:
 	"""Create and store a project in memory."""
 	if name in _projects:

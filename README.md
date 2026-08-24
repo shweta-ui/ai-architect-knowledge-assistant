@@ -15,5 +15,7 @@ uv pip install -r requirements.txt
 Run the application:
 
 ```bash
-python backend/app/main.py
+uvicorn backend.app.main:app --reload
 ```
+
+The API provides `GET /health`, `GET /projects`, and `POST /project`.
